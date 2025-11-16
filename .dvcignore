@@ -1,0 +1,25 @@
+# DVC ignore patterns
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.env
+.venv
+venv/
+ENV/
+logs/
+*.log
+.DS_Store
+.git/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+

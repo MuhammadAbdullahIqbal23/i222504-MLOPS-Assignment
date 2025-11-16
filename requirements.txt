@@ -1,0 +1,10 @@
+# Python dependencies for Airflow project (do NOT include airflow itself)
+psycopg2-binary>=2.9.10
+requests==2.31.0
+pandas>=2.2.0
+
+# DVC and cloud storage support
+dvc[gs,s3]==3.41.0
+
+python-dotenv==1.0.0
+gitpython==3.1.40
