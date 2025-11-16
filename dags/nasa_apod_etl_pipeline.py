@@ -262,7 +262,7 @@ def version_data_with_dvc(git_repo_url: str, **context):
     csv_filepath = ti.xcom_pull(task_ids='load_nasa_apod_data')
     
     # Get GitHub token from environment variable
-    github_token = os.getenv('GITHUB_TOKEN')
+    github_token = os.getenv('GH_TOKEN')
 
     if not csv_filepath:
         raise ValueError("No CSV file path received from load task")
@@ -715,9 +715,9 @@ def commit_dvc_metadata_to_git(**context):
     repo.index.add(files_to_add)
 
     # Get GitHub token for authentication
-    github_token = os.getenv('GITHUB_TOKEN')
+    github_token = os.getenv('GH_TOKEN')
     if not github_token:
-        raise ValueError("GITHUB_TOKEN environment variable is required")
+        raise ValueError("GH_TOKEN environment variable is required")
     print("Using GitHub token from environment variable")
     
     # Ensure remote is configured and update URL with token for authentication
